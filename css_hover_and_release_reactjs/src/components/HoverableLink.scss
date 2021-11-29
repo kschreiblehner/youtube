@@ -19,12 +19,15 @@
     background-color: #f3f3f3;
 
     &.hoverAnimation {
-      animation: hoverAnimation 1s ease-in-out forwards;
+      animation: hoverAnimation 2s ease-in-out;
     }
-
     
     &.leaveAnimation {
-      animation: leaveAnimation 1s ease-in-out;
+      animation: leaveAnimation 2s ease-in-out;
+    }
+
+    &.hoverAnimationEnded {
+      transform: translateX(0);
     }
   }
 }
