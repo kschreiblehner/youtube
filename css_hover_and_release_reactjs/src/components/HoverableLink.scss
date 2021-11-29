@@ -1,5 +1,48 @@
 .link {
-  color: #333;
+  position: relative;
+
+  color: #f3f3f3;
   text-decoration: none;
   font-size: 1.5rem;
+  // padding: 0 1rem;
+
+  overflow: hidden;
+
+  .helper {
+    width: 100%;
+    height: 2px;
+
+    transform: translateX(-110%);
+
+    margin-top: 0.5rem;
+
+    background-color: #f3f3f3;
+
+    &.hoverAnimation {
+      animation: hoverAnimation 1s ease-in-out forwards;
+    }
+
+    
+    &.leaveAnimation {
+      animation: leaveAnimation 1s ease-in-out;
+    }
+  }
+}
+
+@keyframes hoverAnimation {
+    from {
+      transform: translateX(-110%)
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+@keyframes leaveAnimation {
+    from {
+      transform: translateX(0)
+    }
+    to {
+      transform: translateX(110%);
+    }
 }
