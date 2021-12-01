@@ -45,6 +45,7 @@ export default function HoverableLink({ href, children }) {
         setLeaveAnimationRegistered(false);
         return setLeaveAnimationRunning(true);
       }
+      return;
     }
     if (leaveAnimationRunning) {
       setLeaveAnimationRunning(false);      
@@ -53,6 +54,7 @@ export default function HoverableLink({ href, children }) {
         setHoverAnimationRegistered(false);
         return setHoverAnimationRunning(true);
       }
+      return;
     }
   }
 
