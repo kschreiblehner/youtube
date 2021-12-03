@@ -35,7 +35,7 @@ export default function HoverableLink({ src, description }) {
       return setLeaveAnimationRegistered(true);
     }
   }
-  
+
   function animationEnd() {
     if (hoverAnimationRunning) {
       setHoverAnimationRunning(false);
@@ -79,7 +79,11 @@ export default function HoverableLink({ src, description }) {
       onMouseLeave={startLeaveAnimation}
       onAnimationEnd={animationEnd}
     >
-      <img src={src} alt="rotating pic" />
+      <img
+        src={src}
+        alt="rotating pic"
+        onAnimationEnd={(e) => e.stopPropagation()}
+      />
       <p>{description}</p>
     </div>
   );
